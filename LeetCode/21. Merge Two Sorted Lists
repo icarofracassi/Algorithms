@@ -1,1 +1,30 @@
+#couple first tests into the problem 21. merge two sorted lists
+#it may be a dumb way to do it but at first i'll try it and then try to optimize it
+#it isn't finished yet, but delivers the message on the way i'm thinking right now
+#i know that there is plenty room for improvement but i think that'll be funny to see how it all started
+#thanks 
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        resultado = []
+
+        if len(list1) > len(list2):
+            maxnums = len(list1)
+        else:
+            maxnums = len(list2)          
+
+        for i in maxnums: 
+            if list1[i] > list2[i]:
+                resultado.append(list1[i])
+                list1[i].pop
+            else:
+                resultado.append(list2[i])
+                list2[i].pop
+
 
