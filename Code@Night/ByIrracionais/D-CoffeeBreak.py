@@ -1,0 +1,1 @@
+qtd = int(input())
